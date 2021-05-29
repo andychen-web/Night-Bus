@@ -1,0 +1,64 @@
+body{
+  margin:0;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  overflow-y:hidden;
+  /* color only shows up when the body block is specified  */
+}
+
+.night{
+  height:80vh;
+  width:60vw;
+  bottom: 1.5rem;
+  margin:5rem auto;
+  background: url("Img_1.png");
+  position:relative; /*use absolute path*/
+  box-shadow:1px 2px 60px rgba(0, 0, 0, 0.4);
+  overflow-x: hidden;
+}
+.surface{
+  height:140px;
+  width:500%; /*why like this?*/
+  background: url("Img_02.png");
+  display:block; /*why need? Div is block already*/
+  position:absolute;
+  bottom:0%;
+  left:0%;
+  background-repeat: repeat-x;
+  animation:moveRight 6s linear infinite; /*new feat.*/
+}
+
+.car{
+ position:absolute;
+ bottom:8%;
+ left:24%;
+  animation: suspension 1s linear infinite;
+}
+
+/* Animation */
+@keyframes moveRight {
+  /* from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  } */
+  100%{
+    transform:translateX(-2950px);
+  }
+  0%{
+    transform:translateX(0px);
+  }
+}
+
+@keyframes suspension {
+  100%{
+    transform:translateY(-1px);
+  }
+  50%{
+    transform:translateY(2px);
+  }
+  0%{
+    transform:translateY(-1px);
+  }
+}
